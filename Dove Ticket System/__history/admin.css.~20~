@@ -1,0 +1,522 @@
+.btn-navigation {
+    background-color: #2e443d;
+    border-radius: 0;
+    border-color: #2e443d;
+    color: #bbbbbb;
+    margin: 0;
+    padding: 8px 20px 6px 20px;
+    min-width: 162px;
+    margin-top: -11px;
+    font-size: 13pt;
+}
+
+.btn-navigation:hover,
+.btn-navigation:active,
+.btn-navigation:focus {
+    color: #ffffff;
+}
+
+.nav-small-avatar {
+    margin: 0;
+    margin-right: -4px;
+    margin-top: -11px;
+}
+
+.nav-notification-tickets {
+    color: #d1ddd1;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.nav-notification-tickets span {
+    position: absolute;
+    background-color: #c56c54;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 1px 5px 5px 5px;
+    margin-top: -7px;
+    z-index: 999;
+}
+
+.new_tickets_alert_box {
+    position: absolute;
+    background-color: #777777;
+    width: 255px;
+    max-height: 300px;
+    right: 15px;
+    float: right;
+    display: none;
+    padding: 0;
+    z-index: 10000;
+    overflow-y: scroll;
+}
+
+.new_tickets_alert_box .list-group {
+    padding: 0;
+    margin: 0;
+}
+
+.new_tickets_alert_box .list-group-item {
+    margin: 0;
+    border-radius: 0;
+}
+
+.new_tickets_alert_box .list-group-item a {
+    color: #242424;
+}
+
+.new_tickets_alert_box .list-group-item a:hover {
+    color: #60af7d;
+}
+
+.second-navbar-menu {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.second-navbar-menu li {
+    color: #777777;
+    padding: 3px 5px 5px 5px;
+    font-size: 20px;
+    background-color: transparent;
+    border-right: 1px solid #cccccc;
+    text-align: center;
+    margin: auto;
+}
+
+.second-navbar-menu li:first-child {
+    border-left: 1px solid #cccccc;
+}
+
+.second-navbar-menu li i {
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+.second-navbar-menu li.active {
+    color: #777777;
+    padding: 3px 5px 0 5px;
+    font-size: 20px;
+    border-bottom: 5px solid #a9e2cf;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+    list-style-type: none;
+}
+
+.profile_links {
+    border-radius: 0;
+    border: 0;
+    margin-right: 15px;
+}
+
+.admin-body {
+    padding-top: 75px;
+    background-color: #dfe7eb;
+    background-image: url(image/TexturaII.jpg);
+}
+
+.admin-body .btn-group {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.admin-body .btn-group a {
+    padding-top: 10px;
+}
+
+.btn-ticket {
+    background-color: #54c59f;
+    border-radius: 0;
+    border-color: #54c59f;
+    height: 50px;
+    min-width: 150px;
+    color: #eeeeee;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Start */
+
+.btn-ticket:hover {
+    color: #ffffff;
+}
+
+.btn-link a {
+    color: #777777;
+}
+
+.btn-link a:hover {
+    color: #434141;
+}
+
+.btn-link a:active {
+    color: #434141;
+}
+
+#media_tab a{
+    color: #777777;
+}
+
+#media_tab a:hover {
+    color: #434141;
+}
+/* End */
+
+.btn-link {
+    height: 60px;
+    min-width: 150px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #777777;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+    color: #434141;
+}
+
+.btn-link.active {
+    color: #434141;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.dataTables_filter input {
+    background-color: #54c59f;
+    color: #ffffff;
+    border: 0;
+}
+
+.dataTables_length select {
+    background-color: #54c59f;
+    color: #ffffff;
+    border: 0;
+}
+
+.table {
+    margin-top: 25px;
+}
+
+.table thead {
+    background-color: #777777;
+}
+
+.table thead tr {
+    height: 60px;
+}
+
+.table thead tr th {
+    border: 0;
+    padding: 5px 5px 20px 5px;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+}
+
+selected{
+	background-color: ##acbad4;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    color: #242424;
+}
+
+table.dataTable thead .sorting { background-image: none !important; }
+table.dataTable thead .sorting_asc { background-image: none !important; }
+table.dataTable thead .sorting_desc { background-image: none !important; }
+
+table.dataTable thead .sorting_asc_disabled { background-image: none !important; }
+table.dataTable thead .sorting_desc_disabled { background-image: none !important; }
+
+.dataTables_wrapper .row:last-of-type {
+    background-color: #777777;
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.dataTables_paginate {
+    background-color: transparent;
+}
+
+div.dataTables_paginate ul.pagination {
+    background-color: transparent;
+}
+
+div.dataTables_paginate ul.pagination > li > a,
+div.dataTables_paginate ul.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+}
+
+div.dataTables_paginate ul.pagination > li > a:hover,
+div.dataTables_paginate ul.pagination > li > span:hover,
+div.dataTables_paginate ul.pagination > li > a:focus,
+div.dataTables_paginate ul.pagination > li > span:focus {
+    color: #242424;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+div.dataTables_paginate ul.pagination > .active > a,
+div.dataTables_paginate ul.pagination > .active > span,
+div.dataTables_paginate ul.pagination > .active > a:hover,
+div.dataTables_paginate ul.pagination > .active > span:hover,
+div.dataTables_paginate ul.pagination > .active > a:focus,
+div.dataTables_paginate ul.pagination > .active > span:focus {
+    z-index: 2;
+    color: #242424;
+    cursor: default;
+    background-color: transparent;
+    border-color: transparent;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    color: #242424;
+    cursor: not-allowed;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.table tbody tr td {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.table tbody .odd {
+    background-color: #fafafa;
+    height: 50px;
+}
+
+.table tbody .even {
+    background-color: #f6f6f6;
+    height: 50px;
+}
+
+.table tbody tr td.status-open {
+    background-color: #60af7d;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table tbody tr td.status-close {
+    background-color: #f15f7a;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table tbody tr td.status-replied {
+    background-color: #289db5;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table tbody tr td.status-pending {
+    background-color: #eabe59;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table tbody tr td.priority-high {
+     color: #e32254;
+     font-weight: bold;
+}
+
+.table tbody tr td.priority-medium {
+    color: #f29000;
+    font-weight: bold;
+}
+
+.table tbody tr td.priority-low {
+    color: #005a2b;
+    font-weight: bold;
+}
+
+.actions a {
+    padding: 0 5px 0 5px;
+    color: #777777;
+    font-size: 18px;
+}
+
+.actions a:hover {
+    color: #242424;
+}
+
+.actions a[title='Bloquear']:hover {
+	color: red;
+}
+
+.actions a[title='Modificar']:hover {
+	color: #009f00;
+}
+
+.actions a[title='Eliminar']:hover {
+	color: #2b62ff;
+}
+
+#box_body_table {
+    margin-bottom: 100px;
+}
+
+.conversation-user .conversation-title img {
+    width: 40px;
+    height: 40px;
+    margin-top: -3px;
+}
+
+.conversation-user .conversation-title span {
+    min-height: 40px;
+    padding: 13px;
+    margin-left: -4px;
+    margin-top: -2px;
+    background-color: #3f4342;
+    color: #ffffff;
+}
+
+.conversation-user .conversation-title i {
+    font-size: 24px;
+    color: #3f4342;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.conversation-user .conversation-msg {
+    padding: 30px;
+    text-align: justify;
+    background-color: #c1d3d9;
+    border-color: #c1d3d9;
+    border-radius: 0;
+    color: #3f4342;
+    margin-left: 40px;
+}
+
+
+
+.conversation-admin .conversation-title img {
+    width: 40px;
+    height: 40px;
+    margin-top: -3px;
+}
+
+.conversation-admin .conversation-title span {
+    min-height: 40px;
+    padding: 13px;
+    margin-left: -4px;
+    margin-top: -2px;
+    background-color: #54c59f;
+    color: #ffffff;
+}
+
+.conversation-admin .conversation-title i {
+    font-size: 24px;
+    color: #3f4342;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.conversation-admin .conversation-msg {
+    padding: 30px;
+    text-align: justify;
+    background-color: #c3e0dc;
+    border-color: #c3e0dc;
+    border-radius: 0;
+    color: #3f4342;
+    margin-left: 40px;
+}
+
+.conversation-bottom {
+    margin-top: -20px;
+}
+
+.conversation-bottom button {
+    border-radius: 0;
+}
+
+.conversation-bottom .btn-success {
+    background-color: #00ae55;
+    border-color: #00ae55;
+}
+
+.conversation-bottom .btn-danger {
+    background-color: #ee4b34;
+    border-color: #ee4b34;
+}
+
+.conversation-bottom .btn-primary {
+    background-color: #36445c;
+    border-color: #36445c;
+}
+
+.admin-footer {
+    padding-top: 5px;
+}
+
+.ticket-info {
+    padding-left: 70px;
+    margin-bottom: 40px;
+}
+
+.ticket-info p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ticket-info p span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+@media (max-width: 768px) {
+    .second-navbar-menu .navbar-toggle {
+        margin-right: 30px;
+    }
+
+    .profile_links {
+        margin-left: 69px;
+    }
+
+    .new_tickets_alert_box {
+        left: 15px;
+        float: left;
+    }
+
+    .nav-notification-tickets {
+        margin-bottom: 20px;
+    }
+
+    .conversation-user {
+        margin-bottom: 50px;
+    }
+}
