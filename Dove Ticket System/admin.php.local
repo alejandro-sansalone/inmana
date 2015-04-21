@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no" name="viewport">
+	<title>ADS Admin</title>
+	<link type="text/css" rel="stylesheet" href="bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="dataTables.bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="green.css">
+	<link type="text/css" rel="stylesheet" href="bootstrap-select.css">
+	<link type="text/css" rel="stylesheet" href="default.css">
+	<link type="text/css" rel="stylesheet" href="admin.css">
+</head>
+<body>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="navbar-header">
+							<button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+								<span class="sr-only"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="" class="navbar-brand">SOPORTE TECNICO ADS</a> <!-- Aca va el logo -->
+						</div>
+
+						<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+							<div class="nav navbar-nav navbar-right">
+								<i id="message" class="glyphicon glyphicon-envelope nav-notification-tickets">
+									<span id="count_msg">3</span>
+								</i>
+								<img id="img_drop" class="nav-small-avatar" heigt="40" width="40" data-toggle="dropdown" src="image/fafceed7611111a4b8fb75a57e8b2fba.png">
+								<button id="btn_drop" class="btn btn-navigation" data-toggle="dropdown" type="button">Ale 
+									<b class="caret"></b>
+								</button>
+								<div class="dropdown-menu profile_links">
+									<li>
+										<a tabindex="-1" role="menuitem" data-toggle="modal" href="#edit_profile">
+											<i class="glyphicon glyphicon-user" style="margin-right:5px">Perfil</i>
+										</a>
+									</li>
+									<li class="divider" role="presentation"></li>
+									<li>	
+										<a href="logout.php" tabindex="-1" role="menuitem">
+											<i class="glyphicon glyphicon-off" style="margin-right: 5px"></i>Cerrar sesion
+										</a>
+									</li>
+								</div>
+							</div>
+						</div>
+						
+						<div class="new_tickets_alert_box" data-flag="true" style="overflow-y: hidden">
+							<ul class="list-group">
+								<li id="shortcut_msg" clas="listgroup-item text-center" style="font-weight: bold"></li>
+								<li id="message_top_box_16"></li>
+								<li id="message_top_box_6"></li>
+								<li id="message_top_box_10"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- Comienzo de la segunda barra de navegacion -->
+		<div class="second-navbar">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar-default second-navbar-menu" role="navigation">
+						<div class="navbar-header">
+							<button class="navbar-toggle" data-taget="#bs-example-navbar-collapse-2" data-toggle="collapse" type="button">
+								<span class="sr-only"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+									<li class="active" style="margin-top: -11px">
+										<a href=".">
+											<i class="glyphicon glyphicon-comment nav-img" ></i>
+											<p>Reclamos</p>
+										</a>
+									</li>
+									<li class="">
+										<a href=".">
+											<i class="glyphicon glyphicon-user nav-img"></i>
+											<p>Usuarios</p>
+										</a>
+									</li>
+									<li class="">
+										<a href="">
+											<i class="glyphicon glyphicon-headphones nav-img" ></i>
+											<p>Admin</p>
+										</a>
+									</li>
+									<li class="">
+										<a href="">
+											<i class="glyphicon glyphicon-question-sign nav-img"></i>
+											<p>Faq</p>
+										</a>
+									</li>
+									<li class="">
+										<a href="">
+											<i class="glyphicon glyphicon-th-large nav-img"></i>
+											<p>Sectores</p>
+										</a>
+									</li>
+									<li class="">
+										<a href="">
+											<i class="glyphicon glyphicon-envelope nav-img"></i>
+											<p>Mail</p>
+										</a>
+									</li>
+									<li class="">
+										<a href="">
+											<i class="glyphicon glyphicon-cog nav-img"></i>
+											<p>Config</p>
+										</a>
+									</li>
+								</ul>	
+							<ul class="nav navbar-nav navbar-right"></ul>	
+						</div>	
+
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div id="edit_profile" class="modal fade" aria-hidden="true" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="modal-close" class="none" aria-hidden="true" datta-dismiss="modal" type="button">X</button>
+						<h2 class="modal-title">Datos Personales</h2>
+					</div>
+					<div class="modal-body">
+						<!-- Comienzo del Formulario -->
+						<form action="javascript:;" method="post" role="form" class="form-horizontal">
+							<div class="form-group">
+								<label for="fname" class="col-sm-2 control-label">Nombre</label>
+								<div class="col-sm-10">
+									<input type="text" id="fname_edit_profile" class="form-control" placeholder="Nombre">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lname" class="col-sm-2 control-label">Apellido</label>
+								<div class="col-sm-10">
+									<input type="text" id="lname_edit_profile" class="form-control" placeholder="Apellido">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-sm-2 control-label" >E-Mail</label>
+								<div class="col-sm-10">
+									<input type="email" id="email_edit_profile" class="form-control" placeholder="ejemplo@mail.com">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="new_pass" class="col-sm-2 control-label" >Contraseña</label>
+								<div class="col-sm-10">
+									<input type="password" id="new_pass_edit_profile" class="form-control" placeholder="Si quiere una contraseña nueva tipeela">
+								</div>
+							</div>
+							<input type="hidden" id="hidden_update_edit_profile" value="1:{:}administrator">							
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button id="btn_close_edit_profile" class="btn my-btn-default" data-dismiss="modal" type="button">Cerrar</button>
+						<button id="btn_update_edit_profile" class="btn my-btn-success" data-dismiss="modal" type="button">Actualizar</button>
+						<p id="error_update_edit_profile" class="pull-left" style="font-size: 15px"></p>
+						<img src="" alt="" id="preloader_update_edit_profile" class="pull-left" style="display:none;">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="demo-setting">
+			
+		</div>
+		<section class="admin-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="btn-group">
+								<a href="#add_ticket" class="btn btn-ticket active" data-toggle="modal" role="button">NUEVO</a>
+								<a href="" class="btn btn-link" role="button">TODOS</a>
+								<a href="" class="btn btn-link" role="button">ABIERTOS</a>
+								<a href="" class="btn btn-link" role="button">CERRADOS</a>
+								<a href="" class="btn btn-link" role="button">CONTESTADOS</a>
+								<a href="" class="btn btn-link" role="button">PENDIENTES</a>								
+							</div>
+							<!-- Comienzo de las tablas -->	
+							 <img id="preloader_page" style="margin-left: 48%; margin-top: 3%, margin-botton:182px; display:none" src="image/preloader.gif"></img>
+							 <div id="ticket_table" class="table-responsive">
+							 	
+							 </div>
+							 <!-- Fin de las tablas -->
+					</div>
+				</div>
+			</div>
+			<input type="hidden" id="ststus" value="">
+
+			<div id="myModal" class="modal fade" aria-hidden="true" role="dialog">
+				
+			</div>
+			<div id="modal_remove" class="modal fade" aria-hidden="true" role="dialog">
+				
+			</div>
+			<div class="modal fade" id="add_ticket" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button id="modal-close" class="close" aria-hidden="true" data-dismiss="modal" type="button">x</button>
+							<h2 class="modal-title">Nuevo Reclamo</h2>
+						</div>
+						<div class="modal-body">
+							<form action="ajax.php" id="form_add_ticket" class="form-horizontal" enctype="multipart/form-data" method="post" onsubmit="return check_ticket();">
+								<div class="form-group">
+									<label for="" class="col-sm-2"></label>
+									<div class="col-sm-10">
+										<select name="" id="department" class="form-control selector" data-size="5" data-live-search="true" style="display:none;"></select>
+										<div class="btn-group bootstrap-select form-control selector">
+											<button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" type="button" data-id="" title=""></button>
+											<div class="dropdown-menu open">
+												<div class="bootstrap-select-searchbox"><input type="text" class="input-block-level form-control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-2"></label>
+									<div class="col-sm-10">
+										<select name="" id="department" class="form-control selector" data-size="5" data-live-search="true" style="display:none;"></select>
+										<div class="btn-group bootstrap-select form-control selector">
+											<button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" type="button" data-id="" title=""></button>
+											<div class="dropdown-menu open">
+												<div class="bootstrap-select-searchbox"><input type="text" class="input-block-level form-control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-2"></label>
+									<div class="col-sm-10">
+										<select name="" id="department" class="form-control selector" data-size="5" data-live-search="true" style="display:none;"></select>
+										<div class="btn-group bootstrap-select form-control selector">
+											<button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" type="button" data-id="" title=""></button>
+											<div class="dropdown-menu open">
+												<div class="bootstrap-select-searchbox"><input type="text" class="input-block-level form-control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-2"></label>
+									<div class="col-sm-10">
+										<select name="" id="department" class="form-control selector" data-size="5" data-live-search="true" style="display:none;"></select>
+										<div class="btn-group bootstrap-select form-control selector">
+											<button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" type="button" data-id="" title=""></button>
+											<div class="dropdown-menu open">
+												<div class="bootstrap-select-searchbox"><input type="text" class="input-block-level form-control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-2"></label>
+									<div class="col-sm-10">
+										<select name="" id="department" class="form-control selector" data-size="5" data-live-search="true" style="display:none;"></select>
+										<div class="btn-group bootstrap-select form-control selector">
+											<button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" type="button" data-id="" title=""></button>
+											<div class="dropdown-menu open">
+												<div class="bootstrap-select-searchbox"><input type="text" class="input-block-level form-control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="admin-footer">
+			<div id="triangle-up">
+				<i class="glyphicon glyphicon-arrow-up"></i>
+			</div>
+			<div class="bottom-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p>Copyright  2015 - ADSSOFTWARE.COM.AR - CENTRO DE SOPORTE</p>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</footer>
+
+<?php 
+
+    // Datos para la conexion a la base del hosting
+    //$dbc = mysql_connect("localhost", "p7000115_web339", "inMana2011");
+    $dbc = mysql_connect("localhost", "web339", "rFv159urB+");
+    if (!$dbc) {
+        die('No pudo conectarse: ' . mysql_error());
+    }
+    
+    // ----- / Solo a fines de depuracion /--------- //
+    //echo 'Conectado satisfactoriamente' . "<br>";
+
+    // Datos para la conexion a la base del hosting //
+  	//$bd_seleccionada = mysql_select_db("p7000115_web339",$dbc);
+    $bd_seleccionada = mysql_select_db("usr_web339_1",$dbc);
+    if (!$bd_seleccionada) {
+        die ('No se puede usar la base de datos seleccionada : ' . mysql_error());
+    }
+
+    $consulta_prop = "SELECT * FROM Casas";
+
+    $rs = mysql_query($consulta_prop, $dbc); 
+
+    while ($fila = mysql_fetch_assoc($rs)) { 
+
+    	echo	$fila['nombre'] ."<br>" ;	
+
+    }
+
+
+?>
+
+		<script src="jquery1.11.0.js" type="text/javascript" ></script>
+		<script src="jquery-ui-1.10.4.js" type="text/javascript" ></script>
+		<script src="bootstrap.js" type="text/javascript" ></script>
+		<script src="skrollr.js" type="text/javascript" ></script>
+		<script src="default.js" type="text/javascript" ></script>
+		<script src="icheck.js" type="text/javascript" ></script>
+
+		<script src="admin.js" type="text/javascript" ></script>
+		<script src="jquery.form.js" type="text/javascript" ></script>
+		<script src="bootstrap-select.js" type="text/javascript" ></script>
+
+</body>
+</html>

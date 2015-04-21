@@ -1,0 +1,57 @@
+
+            /* normal */
+        .demo-setting{
+            position:fixed;
+            width:350px;
+            height:50px;
+            background-color:#444;
+            top:46%;
+            right:0;
+            margin-right:-300px;
+            z-index: 100;
+
+            /* Makes opening smoothly */
+            transition: margin-right ease 1s;
+            -moz-transition: margin-right ease 1s;
+            -webkit-transition: margin-right ease 1s;
+            -o-transition: margin-right ease 1s;
+        }
+
+        .demo-setting i {
+            padding: 13px 0px 0px 13px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .demo-setting span {
+            padding-top: 9px;
+        }
+
+            /* opened */
+        .demo-setting.opened,
+        .demo-setting:hover{
+            margin-right:0px;
+        }
+
+            /* toggle style when wrapper is hovered */
+        .demo-setting:hover .toggle{
+            background-color: #666;
+            color: white;
+        }
+
+        .demo-setting:not(:hover) .toggle:before{
+            content:"Open ";
+        }
+        .demo-setting:hover .toggle:before{
+            content:"Your ";
+        }
+
+        .demo-setting-box {
+            position: relative;
+            width:300px;
+            height:160px;
+            background-color: #222;
+            float:right;
+            color: white;
+        }
+    

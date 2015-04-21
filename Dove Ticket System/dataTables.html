@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test_dataTables</title>
+	<link rel="stylesheet" type="text/css" href="datatables/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="datatables/css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="datatables/css/demo.css">
+	<style type="text/css" class="init">
+
+	</style>
+	<script type="text/javascript" language="javascript" src="datatables/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="datatables/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="datatables/js/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="datatables/js/demo.js"></script>
+
+	<script type="text/javascript" language="javascript" class="init">
+	
+		$(document).ready( function() {
+    
+				$('#example').dataTable( {
+						"processing": true,
+						"serverSide": true,
+						"ajax": "server_processing.php", 
+						"sPaginationType":"full_numbers"	
+
+				});
+
+				var table = $('#example').DataTable();
+
+				$('#example tbody').on( 'click', 'tr',  function () {	
+					 var myRowID = table.row( this ).index();
+					 alert( 'Row index: '+myRowID );
+				});
+
+				$('#test').on('click',  function() {
+					table.draw(false);
+				});
+
+
+  } );
+	</script>
+
+<style>
+	.dataTables_info{
+		background-color: red;
+		padding: 0.755em;
+	}
+</style>
+
+</head>
+
+<body class="dt-example">
+	<div class="container">
+		<section>
+			<h1>DataTables example <span>Zero configuration</span></h1>
+<button id='test'>Probar</button>
+			<div class="info">
+				<p>DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function.</p>
+
+				<p>Searching, ordering, paging etc goodness will be immediately added to the table, as shown in this example.</p>
+			</div>
+				<table id="example" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+											<th>Nombre</th>
+											<th>Apellido</th>
+											<th>Contraseña</th>
+											<th>Email</th>
+											<th>Admin</th>
+											<th>Fecha</th>
+			            </tr>
+			        </thead>
+			 
+			        <tfoot>
+			            <tr>
+											<th>Nombre</th>
+											<th>Apellido</th>
+											<th>Contraseña</th>
+											<th>Email</th>
+											<th>Admin</th>
+											<th>Fecha</th>
+			            </tr>
+			        </tfoot>
+			 
+			  </table>
+
+		</section>
+	</div>
+
+
+
+</body>
+</html>
